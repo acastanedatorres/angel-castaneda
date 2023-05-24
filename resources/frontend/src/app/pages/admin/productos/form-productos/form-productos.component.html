@@ -14,7 +14,7 @@
             <div class="col-6">
                 <mat-form-field appearance="fill" class="w-100">
                     <mat-label>Precio en Dólares</mat-label>
-                    <input #input matInput formControlName="precio_dolares">
+                    <input type="number" #input matInput formControlName="precio_dolares">
                     <mat-error *ngIf="errorHandling('precio_dolares', 'required')">
                         El campo <strong>Precio en dólares</strong> es obligatorio
                      </mat-error>
@@ -23,7 +23,7 @@
             <div class="col-6">
                 <mat-form-field appearance="fill" class="w-100">
                     <mat-label>Precio en Pesos</mat-label>
-                    <input matInput formControlName="precio_pesos">
+                    <input type="number" matInput formControlName="precio_pesos">
                     <mat-error *ngIf="errorHandling('precio_pesos', 'required')">
                         El campo <strong>Precio en pesos</strong> es obligatorio
                      </mat-error>
@@ -32,21 +32,13 @@
             <div class="col-6">
                 <mat-form-field appearance="fill" class="w-100">
                     <mat-label>Puntos</mat-label>
-                    <input matInput formControlName="puntos">
+                    <input type="number" matInput formControlName="puntos">
                     <mat-error *ngIf="errorHandling('puntos', 'required')">
                         El campo <strong>Puntos</strong> es obligatorio
                      </mat-error>
                 </mat-form-field>
             </div>
-            <div class="col-6">
-                <mat-form-field appearance="fill" class="w-100">
-                    <mat-label>Activo</mat-label>
-                    <input matInput formControlName="activo">
-                    <mat-error *ngIf="errorHandling('activo', 'required')">
-                        El campo <strong>Activo</strong> es obligatorio
-                     </mat-error>
-                </mat-form-field>
-            </div>
+             
         </div>
         <mat-divider></mat-divider>
         <h4 class="my-2">Español</h4>
@@ -69,22 +61,14 @@
                      </mat-error>
                 </mat-form-field>
             </div>
-            <div class="col-6">
+            <div class="col-12">
                 <mat-form-field appearance="fill" class="w-100">
                     <mat-label>Descripción Larga</mat-label>
                     <input matInput formControlName="esp_descripcion_larga">
                     
                 </mat-form-field>
             </div>
-            <div class="col-6">
-                <mat-form-field appearance="fill" class="w-100">
-                    <mat-label>Idioma</mat-label>
-                    <input matInput formControlName="esp_idioma">
-                    <mat-error *ngIf="errorHandling('esp_idioma', 'required')">
-                        El campo <strong>Activo</strong> es obligatorio
-                     </mat-error>
-                </mat-form-field>
-            </div>
+            
         </div>
         <h4 class="my-2">Ingles</h4>
         <div class="row">
@@ -106,21 +90,13 @@
                      </mat-error>
                 </mat-form-field>
             </div>
-            <div class="col-6">
+            <div class="col-12">
                 <mat-form-field appearance="fill" class="w-100">
                     <mat-label>Descripción Larga</mat-label>
                     <input matInput formControlName="en_descripcion_larga">
                 </mat-form-field>
             </div>
-            <div class="col-6">
-                <mat-form-field appearance="fill" class="w-100">
-                    <mat-label>Idioma</mat-label>
-                    <input matInput formControlName="en_idioma">
-                    <mat-error *ngIf="errorHandling('en_idioma', 'required')">
-                        El campo <strong>Activo</strong> es obligatorio
-                     </mat-error>
-                </mat-form-field>
-            </div>
+             
         </div>
     </form>
     <ng-template pTemplate="footer">

@@ -1,1 +1,27 @@
-<p>detalle works!</p>
+<div class="container p-4" *ngIf="producto">
+    <p-breadcrumb class="max-w-full my-4" [model]="items" [home]="home"></p-breadcrumb>
+    <br>
+    <p-card>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-13.png" alt="">
+            </div>
+            <div class="col-12 col-md-6">
+                <h4>{{producto.traducciones[0].nombre}}</h4>
+                <small>{{producto.traducciones[0].descripcion_corta}}</small>
+                <h4>SKU: {{producto.sku}}</h4>
+                <ng-container *ngIf="producto.traducciones[0].idioma == 'ingles'">
+                    <h5>Price : {{producto.precio_dolares | currency:'USD'}} DLS</h5>
+                    <h3>Points : {{producto.puntos}}</h3>
+                </ng-container>
+                <ng-container *ngIf="producto.traducciones[0].idioma == 'español'">
+                    <h5>Precio : {{producto.precio_pesos | currency:'USD'}} MXN</h5>
+                    <h3>Puntos : {{producto.puntos}}</h3>
+                </ng-container>
+              
+
+                <p>{{producto.traducciones[0].descripcion_larga}}</p>
+            </div>
+        </div>
+    </p-card>
+</div>

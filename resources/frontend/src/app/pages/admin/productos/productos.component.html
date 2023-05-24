@@ -18,7 +18,7 @@
             <td><span class="p-column-title">Precio Dólares</span>{{product.precio_dolares | currency:'USD'}}</td>
             <td><span class="p-column-title">Precio Pesos</span>{{product.precio_pesos | currency:'USD'}}</td>
             <td><span class="p-column-title">Puntos</span>{{product.puntos}}</td>
-            <td><span class="p-column-title">Activo</span>{{product.activo}}</td>
+            <td><span class="p-column-title">Activo</span> <p-inputSwitch [(ngModel)]="product.activo"></p-inputSwitch></td>
             <!-- <td><p-inputSwitch  ></p-inputSwitch></td> -->
             <td>
               <div class="flex">

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Controllers imports
 
 use App\Http\Controllers\ProductoController;
-
+use App\Http\Controllers\WebController;
 
 
 /*
@@ -25,3 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('productos', ProductoController::class);
+
+Route::prefix('public')->group(function() {
+    Route::get('/productos' ,      [WebController::class, 'index'] );
+    Route::get('/productos/{id}' , [WebController::class, 'details'] );
+});

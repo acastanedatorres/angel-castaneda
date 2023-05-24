@@ -5,9 +5,10 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductosComponent } from './productos/productos.component';
 import { FormProductosComponent } from './productos/form-productos/form-productos.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetalleProductosComponent } from './productos/detalle-productos/detalle-productos.component';
 
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { DetalleProductosComponent } from './productos/detalle-productos/detalle
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgChartsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

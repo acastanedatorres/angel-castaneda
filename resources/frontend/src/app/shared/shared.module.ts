@@ -25,6 +25,7 @@ import { TagModule } from 'primeng/tag';
 import { ButtonModule } from 'primeng/button'
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { CardModule } from 'primeng/card';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { CardModule } from 'primeng/card';
     MatInputModule,
     MatFormFieldModule,
     MatDividerModule,
+    BreadcrumbModule
   ]
 })
 export class SharedModule {}

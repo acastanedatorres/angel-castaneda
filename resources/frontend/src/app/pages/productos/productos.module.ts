@@ -6,11 +6,13 @@ import { GaleriaComponent } from './galeria/galeria.component';
 
  
 import { SharedModule } from 'src/app/shared/shared.module';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
   declarations: [
     ProductosComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    DetalleComponent
   ],
   imports: [
     CommonModule,

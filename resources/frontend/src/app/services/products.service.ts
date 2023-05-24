@@ -18,6 +18,18 @@ export class ProductsService {
     return this.http.delete(`${environment.apiUrl}productos/${id}`)
   }
 
+  create(data : any):Observable<any> {
+    return this.http.post(`${ environment.apiUrl }productos`, data);
+  }
+
+  update(data: any, id : number ):Observable<any> {
+    return this.http.put(`${ environment.apiUrl }productos/${id}`, data);
+  }
+
+  getProductById(id:number): Observable<any> {
+    return this.http.get(`${ environment.apiUrl }productos/${id}`)
+  }
+
   getTipoDeCambio(): Observable<any> {
     const headers = {
       "Access-Control-Allow-Origin" : "*",
@@ -26,5 +38,14 @@ export class ProductsService {
       "dataType": "jsonp"
     }
     return this.http.jsonp(`https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/2023-05-23/2023-05-23?token=bc11040602b0e554b09c5058618a12b1f19dd523d3516cf8d8caf4cfb2692f17`, 'callback')
+  }
+  
+
+  getProducts(filters : any = null){
+    return this.http.get(`${environment.apiUrl}public/productos`, {params: filters});
+  }
+
+  getById(id: string){
+    return this.http.get(`${environment.apiUrl}public/productos/${id}`);
   }
 }

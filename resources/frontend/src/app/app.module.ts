@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ButtonModule } from 'primeng/button';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ButtonModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    NgChartsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

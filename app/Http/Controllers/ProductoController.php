@@ -42,7 +42,6 @@ class ProductoController extends Controller
                 $producto->precio_dolares = $request->precio_dolares;
                 $producto->precio_pesos   = $request->precio_pesos;
                 $producto->puntos         = $request->puntos;
-                $producto->activo         = $request->activo;
         
                 $producto->save();
         
