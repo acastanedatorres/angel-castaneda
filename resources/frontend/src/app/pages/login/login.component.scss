@@ -1,0 +1,113 @@
+.background-login {
+    position: relative;
+
+    h1, h2, h3, h4, p, a {
+        color: white;
+    }
+
+    form {
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        text-transform: uppercase;
+        margin-top: 3rem;
+        border-bottom: 5px solid #3435a2;
+    }
+
+    .mask {
+        background: linear-gradient(170deg, rgb(49 46 62 / 90%) 3%, rgb(52 53 85 / 90%) 20%, rgb(63 81 181 / 90%) 55%, rgb(0 154 185 / 90%) 94%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    
+    img {
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .form-login {
+        margin: auto;
+        top: 0;
+        display: flex;
+        height: 100%;
+        min-width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: fixed;
+        text-align: center;
+    }
+
+    .logo {
+        background-image: url("https://portal.omnilife.com/themes/omnilife2018/images/logos/omnilife.png");
+        background-size: contain;
+        width: 8rem;
+        height: 5rem;
+        margin: 1rem;
+    }
+}
+
+.input-login {
+    max-width: 100%;
+
+    .white-color {
+        color: white;
+    }
+
+    input {
+        color: white;
+    }
+}
+
+.p-button-outline {
+    border: 2px white solid;
+    background: transparent;
+    margin-top: 3rem;
+}
+
+::ng-deep .mat-form-field-appearance-fill {
+    .mat-form-field-flex {
+        background-color: rgb(250 250 250 / 12%)!important;
+        width: 400px;
+        border-radius: 4px!important;
+    }
+
+    &.mat-form-field-disabled .mat-form-field-flex {
+       background-color: rgb(250 250 250 / 12%)!important;
+    }
+
+    .mat-form-field-underline {
+        background-color: none;
+        height: 0!important;
+    }
+    .mat-form-field-underline::before {
+      background-color: none;
+      height: 0!important;
+    }
+
+    .mat-form-field-label {
+        color: rgb(255 255 255 / 65%);
+    }
+
+    .mat-form-field-ripple {
+        background-color: rgb(240 238 238 / 87%);
+    }
+    .mat-input-element {
+        caret-color: #fafbffe3;
+    }
+
+    @media (max-width: 600px) {
+        .mat-form-field-flex {
+            background-color: rgb(250 250 250 / 12%)!important;
+            width: 80vw;
+            border-radius: 4px!important;
+        }
+    }
+}

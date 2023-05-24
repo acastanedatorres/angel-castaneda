@@ -1,0 +1,130 @@
+<p-card header="Nuevo Producto">
+    <form [formGroup]="formGroup">
+        <h3>Datos generales</h3>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>SKU</mat-label>
+                    <input matInput formControlName="sku">
+                    <mat-error *ngIf="errorHandling('sku', 'required')">
+                        El campo <strong>SKU</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Precio en Dólares</mat-label>
+                    <input #input matInput formControlName="precio_dolares">
+                    <mat-error *ngIf="errorHandling('precio_dolares', 'required')">
+                        El campo <strong>Precio en dólares</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Precio en Pesos</mat-label>
+                    <input matInput formControlName="precio_pesos">
+                    <mat-error *ngIf="errorHandling('precio_pesos', 'required')">
+                        El campo <strong>Precio en pesos</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Puntos</mat-label>
+                    <input matInput formControlName="puntos">
+                    <mat-error *ngIf="errorHandling('puntos', 'required')">
+                        El campo <strong>Puntos</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Activo</mat-label>
+                    <input matInput formControlName="activo">
+                    <mat-error *ngIf="errorHandling('activo', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <h4 class="my-2">Español</h4>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="esp_nombre">
+                    <mat-error *ngIf="errorHandling('esp_nombre', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Descripción Corta</mat-label>
+                    <input matInput formControlName="esp_descripcion_corta">
+                    <mat-error *ngIf="errorHandling('esp_descripcion_corta', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Descripción Larga</mat-label>
+                    <input matInput formControlName="esp_descripcion_larga">
+                    
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Idioma</mat-label>
+                    <input matInput formControlName="esp_idioma">
+                    <mat-error *ngIf="errorHandling('esp_idioma', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <h4 class="my-2">Ingles</h4>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="en_nombre">
+                    <mat-error *ngIf="errorHandling('en_nombre', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Descripción Corta</mat-label>
+                    <input matInput formControlName="en_descripcion_corta">
+                    <mat-error *ngIf="errorHandling('en_descripcion_corta', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Descripción Larga</mat-label>
+                    <input matInput formControlName="en_descripcion_larga">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Idioma</mat-label>
+                    <input matInput formControlName="en_idioma">
+                    <mat-error *ngIf="errorHandling('en_idioma', 'required')">
+                        El campo <strong>Activo</strong> es obligatorio
+                     </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <ng-template pTemplate="footer">
+        <button (click)="submit()" type="submit"pButton class="p-button-success" label="Guardar" icon="pi pi-check"></button>
+        <button (click)="handleCancel()" pButton class="p-button-warning" label="Cancelar" icon="pi pi-times" [style]="{ 'margin-left': '.5em' }"></button>
+    </ng-template>
+</p-card>

@@ -1,0 +1,44 @@
+<section class="background-login">
+    <img alt="login" src="https://portal.omnilife.com/uploads/images/portal/start/start-bg-desktop.png">
+    <div class="mask"></div>
+    <div class="form-login">
+        <form [formGroup]="formParent" autocomplete="off" novalidate>
+            <div class="logo"></div>
+            <h1 class="title"></h1>
+            <mat-form-field class="w-100" appearance="fill">
+                <mat-label class="white-color">Correo electrónico o usuario</mat-label>
+                <input
+                    autocomplete="nope"
+                    name="cc"
+                    type="text"
+                    matInput
+                    required
+                >
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="fill">
+                <mat-label class="white-color">Contraseña</mat-label>
+                <input
+                    autocomplete="nope"
+                    name="pp"
+                    [type]="hideOld ? 'password' : 'text'"
+                    matInput
+                    required
+                >
+                <button mat-icon-button matSuffix (click)="hideOld = !hideOld" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideOld">
+                    <mat-icon class="">
+                        {{hideOld ? 'visibility_off' : 'visibility'}}
+                    </mat-icon>
+                </button>
+            </mat-form-field>
+            <!-- <p-message *ngIf="$error | async" severity="error" text="Inicio de sesión incorrecto" styleClass="mt-2 w-100"></p-message>     -->
+            <button
+                pButton
+                pRipple
+                type="button"
+                label="Iniciar sesión"
+                class="p-button-rounded p-button-outline w-100"
+                (click)="login()"
+            ></button>
+        </form>
+    </div>
+</section>
