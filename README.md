@@ -6,19 +6,38 @@
 
 <h5>Como correr el proyecto</h5>
 
+<ul>
+    <li>Ejecutar composer install</li>
+    <li>ejecutar cp .env.example .env/li>
+    <li>configurar nombre de la base de datos</li>
+    <li>ejecutar php artisan migrate</li>
+    <li>ejecutar php artisan key:generate</li>
+</ul>
 
-1 .- Ejecutar composer install
-2 .- ejecutar cp .env.example .env
-3 .- configurar nombre de la base de datos
-4 .- ejecutar php artisan migrate
-5 .- ejecutar php artisan key:generate
+ 
+<h5> ara ejecutar el frontEnd </h5>
 
-Para ejecutar el frontEnd
+<ul>
+    <li>Cambiar a la carpeta resource/frontend</li>
+    <li>Ejecutar npm install</li>
+    <li>Instalar angular/cli en caso de no tenerse instalado</li>
+    <li>configurar rutas de api en src/environment/environment.prod.ts y environment.ts</li>
+    <li>ejecutar con comando ng serve -o </li>
+</ul>
+ 
 
-1.- Cambiar a la carpeta resource/frontend
-2.- Ejecutar npm install
-3.- Instalar angular/cli en caso de no tenerse instalado
-4.- configurar rutas de api en src/environment/environment.prod.ts y environment.ts
-5.- ejecutar con comando ng serve -o 
+<h5>
+    rutas de administrador
+</h5>
 
+http://localhost:4200/admin/productos
+
+<h5>
+    rutas publicas
+</h5>
+
+
+http://localhost:4200/productos
+
+ 
 
